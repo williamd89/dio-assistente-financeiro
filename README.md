@@ -1,149 +1,177 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Assistente Financeiro Inteligente com IA Generativa
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**.
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Neste projeto, foi desenvolvido um agente financeiro com IA Generativa com foco em:
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+* Ajudar usuários a entender opções de produtos financeiros
+* Personalizar sugestões com base no perfil do usuário
+* Atuar de forma educativa, sem realizar recomendações diretas
+* Garantir segurança e evitar respostas imprecisas
+
+A solução foi construída utilizando Python, Streamlit e integração com modelos de linguagem (LLM).
 
 ---
 
-## O Que Você Deve Entregar
+## O Que Foi Desenvolvido
 
 ### 1. Documentação do Agente
 
-Defina **o que** seu agente faz e **como** ele funciona:
+O agente foi projetado para atuar como um **assistente financeiro educativo**, com foco em:
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+* Identificação do perfil do usuário (conservador, moderado ou arrojado)
+* Apoio na tomada de decisão financeira
+* Comunicação clara e acessível
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+📄 Arquivo: `docs/01-documentacao-agente.md`
 
 ---
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Foram utilizados dados mockados para simular o comportamento do agente:
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| Arquivo                     | Formato | Utilização                       |
+| --------------------------- | ------- | -------------------------------- |
+| `perfil_investidor.json`    | JSON    | Definição de perfil do usuário   |
+| `produtos_financeiros.json` | JSON    | Produtos financeiros disponíveis |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
+Os dados são utilizados para contextualizar as respostas da IA.
 
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+📄 Arquivo: `docs/02-base-conhecimento.md`
 
 ---
 
 ### 3. Prompts do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+Foi desenvolvido um conjunto de prompts com regras claras para garantir:
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+* Respostas educativas
+* Ausência de recomendações diretas
+* Linguagem simples
+* Segurança contra alucinações
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+📄 Arquivo: `docs/03-prompts.md`
 
 ---
 
 ### 4. Aplicação Funcional
 
-Desenvolva um **protótipo funcional** do seu agente:
+Foi desenvolvido um chatbot interativo com:
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+* Interface moderna em Streamlit
+* Chat com efeito de digitação
+* Feedback visual ("Pensando...")
+* Integração com OpenAI
 
-📁 **Pasta:** [`src/`](./src/)
+Além disso, o sistema conta com:
+
+* Histórico persistente de conversas
+* Títulos automáticos gerados por IA
+* Resumo automático das conversas
+* Busca, edição, fixação e exclusão de histórico
+
+📁 Pasta: `src/`
 
 ---
 
 ### 5. Avaliação e Métricas
 
-Descreva como você avalia a qualidade do seu agente:
+O agente foi avaliado com base em:
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+* Assertividade das respostas
+* Coerência com o perfil do usuário
+* Segurança (não recomendação direta)
+* Clareza e utilidade
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+📄 Arquivo: `docs/04-metricas.md`
 
 ---
 
 ### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+Foi desenvolvido um pitch de 3 minutos apresentando:
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+* Problema
+* Solução
+* Demonstração
+* Diferencial
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+📄 Arquivo: `docs/05-pitch.md`
 
 ---
 
 ## Estrutura do Repositório
 
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
-```
+/data  
+├── perfil_investidor.json  
+└── produtos_financeiros.json
+
+/docs  
+├── 01-documentacao-agente.md  
+├── 02-base-conhecimento.md  
+├── 03-prompts.md  
+├── 04-metricas.md  
+└── 05-pitch.md
+
+/logs  
+└── histórico de conversas
+
+/src  
+└── app.py
+
+.env  
+.gitignore  
+requirements.txt  
+README.md
 
 ---
 
-## Dicas Finais
+## Tecnologias Utilizadas
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+* Python
+* Streamlit
+* OpenAI API (GPT)
+* JSON
+* Dotenv
+
+---
+
+## Como Executar
+
+1. Clonar o repositório
+
+git clone https://github.com/williamd89/dio-assistente-financeiro  
+cd https://github.com/williamd89/dio-assistente-financeiro
+
+2. Instalar dependências
+
+pip install -r requirements.txt
+
+3. Configurar variável de ambiente
+
+Criar arquivo `.env`:
+
+OPENAI_API_KEY=sua_chave
+
+4. Executar o projeto
+
+streamlit run src/app.py
+
+---
+
+## Diferenciais do Projeto
+
+* Uso responsável de IA no contexto financeiro
+* Interface moderna e interativa
+* Experiência semelhante a produtos reais (UX avançada)
+* Persistência e gestão completa de histórico
+* Organização inteligente das conversas
+
+---
+
+## Observação
+
+Este projeto tem caráter educacional e não substitui um consultor financeiro profissional.
