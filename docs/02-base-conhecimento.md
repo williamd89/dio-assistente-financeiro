@@ -2,54 +2,67 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `perfil_investidor.json` | JSON | Classificar o perfil do usuário com base na tolerância a risco |
+| `produtos_financeiros.json` | JSON | Sugerir produtos financeiros compatíveis com o perfil |
 
 > [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+> Os dados utilizados são mockados e foram criados para fins educacionais.
 
 ---
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
+Os dados foram criados manualmente com foco em simplicidade e clareza.
 
-[Sua descrição aqui]
+As principais adaptações foram:
+
+- Definição de três perfis de investidor (conservador, moderado e arrojado)  
+- Classificação dos produtos financeiros por nível de risco  
+- Inclusão de descrições simples para facilitar a explicação ao usuário  
 
 ---
 
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON são carregados no início da execução da aplicação e armazenados em memória.
+
+---
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são utilizados de forma indireta:
+
+- O sistema identifica o perfil do usuário com base nas respostas  
+- Os produtos são filtrados de acordo com o nível de risco  
+- O modelo de linguagem utiliza essas informações para gerar respostas explicativas  
 
 ---
 
 ## Exemplo de Contexto Montado
 
+
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
 Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+Nome: Usuário
+Objetivo: Investir com segurança
+Prazo: Curto prazo
+Tolerância a risco: Baixa
+Experiência: Iniciante
+Perfil identificado: Conservador
+
+Produtos sugeridos:
+
+Poupança: Alta liquidez e baixo risco
+CDB: Retorno previsível e baixo risco
+Tesouro Direto: Segurança e opções de prazo
+
+Observação:
+As sugestões são baseadas no perfil informado e têm caráter educativo.
 ```

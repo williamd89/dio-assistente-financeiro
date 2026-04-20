@@ -5,39 +5,41 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas têm dificuldade em escolher produtos financeiros porque não entendem conceitos como risco, liquidez e rentabilidade. Isso gera insegurança e pode levar a decisões inadequadas ou à falta de ação.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente atua como um assistente financeiro educativo, fazendo perguntas simples para entender o perfil do usuário (objetivo, prazo e tolerância a risco) e, com base nisso, apresenta opções de produtos financeiros de forma clara, sempre explicando o motivo das sugestões.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+- Pessoas iniciantes em finanças
+- Usuários que desejam investir, mas não sabem por onde começar
+- Clientes de bancos e fintechs que buscam orientação simples
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Assistente Financeiro com IA
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+Educativo, consultivo e neutro. O agente orienta o usuário sem impor decisões, ajudando na compreensão dos produtos financeiros.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Acessível, simples e levemente conversacional, evitando termos técnicos complexos.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Posso te ajudar a entender opções de investimentos de forma simples."
+- Confirmação: "Entendi seu perfil! Vou te mostrar algumas opções que podem fazer sentido."
+- Erro/Limitação: "Não tenho informação suficiente para sugerir opções ainda. Pode me contar mais sobre seu objetivo?"
 
 ---
 
@@ -59,10 +61,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Chat simples via terminal ou aplicação em Python |
+| LLM | Modelo de linguagem (OpenAI GPT) para interpretação e resposta |
+| Base de Conhecimento | Estrutura simples com perfis de investidor e produtos financeiros |
+| Validação | Regras para evitar recomendações diretas e garantir resposta educativa |
 
 ---
 
@@ -70,12 +72,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] Agente responde com base em regras e contexto definido
+- [x] Respostas são explicativas e não afirmativas
+- [x] Quando não sabe, pede mais informações
+- [x] Não faz recomendações de investimento sem entender o perfil do usuário
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Não recomenda produtos específicos de forma definitiva
+- Não substitui um consultor financeiro profissional
+- Não garante retorno financeiro
+- Não acessa dados reais do usuário
