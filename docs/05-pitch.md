@@ -3,47 +3,61 @@
 ## Roteiro Sugerido
 
 ### 1. O Problema (30 seg)
-> Qual dor do cliente você resolve?
 
-Hoje, muitas pessoas têm dificuldade em escolher produtos financeiros porque não entendem conceitos básicos como risco, liquidez e rentabilidade.
+Hoje, muitas pessoas têm dificuldade em escolher produtos financeiros porque não entendem conceitos como risco, liquidez e rentabilidade.
 
-Na prática, isso faz com que o dinheiro fique parado ou que decisões sejam tomadas sem clareza, muitas vezes baseadas em indicação de terceiros ou impulso.
+Na prática, isso faz com que o dinheiro fique parado ou que decisões sejam tomadas sem conhecimento suficiente, muitas vezes baseadas em indicações informais ou impulso.
 
 ---
 
 ### 2. A Solução (1 min)
-> Como seu agente resolve esse problema?
 
-Para resolver isso, eu desenvolvi um assistente financeiro com IA, focado em educação financeira e experiência do usuário.
+Para resolver esse problema, eu desenvolvi um assistente financeiro com IA, focado em educação financeira e experiência do usuário.
 
-O agente conversa com o usuário de forma simples, entendendo informações como objetivo, prazo e tolerância a risco.
+O agente conversa com o usuário de forma simples, coletando informações como objetivo, prazo, tolerância a risco e experiência.
 
-Com base nisso, ele identifica o perfil do usuário e apresenta opções de produtos financeiros adequadas, sempre explicando o porquê de cada opção.
+Com base nisso, ele identifica automaticamente o perfil do usuário e apresenta opções de produtos financeiros adequadas, explicando cada uma delas de forma clara.
 
-Um ponto importante é que o agente não faz recomendações diretas. Ele atua como um apoio à decisão, mostrando possibilidades e ajudando o usuário a entender melhor suas escolhas.
+Um ponto importante é que o agente não realiza recomendações diretas. Ele atua como um apoio à decisão, promovendo entendimento e segurança.
+
+Além disso, a solução evolui para um nível de produto real, com funcionalidades como histórico persistente de conversas, títulos automáticos gerados por IA, organização do histórico com busca, fixação, edição e exclusão de conversas.
 
 ---
 
 ### 3. Demonstração (1 min)
-> Mostre o agente funcionando (pode ser gravação de tela)
 
-Agora vou mostrar rapidamente o funcionamento.
+Na demonstração, primeiro mostro que o sistema não responde sem contexto, solicitando que o usuário preencha seu perfil.
 
-Primeiro, o usuário faz uma pergunta genérica, como “qual o melhor investimento?”. O agente não responde diretamente, e pede mais informações para entender o perfil.
+Em seguida, após preencher as informações, o agente identifica o perfil e apresenta opções adequadas, explicando os motivos.
 
-Em seguida, o usuário informa que quer investir com segurança e baixo risco.
+Durante a interação, o sistema exibe feedback visual com “Pensando...” e resposta com efeito de digitação, tornando a experiência mais natural.
 
-O agente então identifica um perfil mais conservador e apresenta opções como poupança, CDB e Tesouro Direto, explicando cada uma delas.
-
-Por fim, mesmo quando o usuário pede uma recomendação direta, o agente mantém o comportamento educativo e reforça que a decisão depende do perfil.
+Também mostro a gestão de histórico, com múltiplas conversas, títulos automáticos e organização semelhante a ferramentas reais de IA.
 
 ---
 
 ### 4. Diferencial e Impacto (30 seg)
-> Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
 O principal diferencial do projeto é o uso responsável da inteligência artificial no contexto financeiro.
 
-Ao invés de substituir a decisão do usuário, o agente orienta, educa e promove maior consciência financeira.
+Ao invés de recomendar diretamente, o agente orienta o usuário, promovendo educação financeira e evitando decisões impulsivas.
 
-Esse tipo de solução pode ser aplicado em bancos e fintechs para melhorar a experiência do cliente e ajudar as pessoas a tomarem decisões mais seguras e informadas sobre seu dinheiro.
+Além disso, a experiência do usuário foi pensada como um produto real, com persistência, organização e fluidez na interação.
+
+Essa solução pode ser aplicada em bancos e fintechs para melhorar a experiência do cliente e ajudar pessoas a tomarem decisões mais conscientes sobre seu dinheiro.
+
+---
+
+## Checklist do Pitch
+
+* [x] Duração máxima de 3 minutos
+* [x] Problema claramente definido
+* [x] Solução demonstrada na prática
+* [x] Diferencial explicado
+* [x] Áudio e vídeo com boa qualidade
+
+---
+
+## Link do Vídeo
+
+Adicionar link após gravação
