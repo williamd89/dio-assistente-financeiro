@@ -105,26 +105,26 @@ Foi desenvolvido um pitch de 3 minutos apresentando:
 
 ## Estrutura do Repositório
 
-/data
-├── perfil_investidor.json
+/data  
+├── perfil_investidor.json  
 └── produtos_financeiros.json
 
-/docs
-├── 01-documentacao-agente.md
-├── 02-base-conhecimento.md
-├── 03-prompts.md
-├── 04-metricas.md
+/docs  
+├── 01-documentacao-agente.md  
+├── 02-base-conhecimento.md  
+├── 03-prompts.md  
+├── 04-metricas.md  
 └── 05-pitch.md
 
-/logs
+/logs  
 └── histórico de conversas
 
-/src
+/src  
 └── app.py
 
-.env
-.gitignore
-requirements.txt
+.env  
+.gitignore  
+requirements.txt  
 README.md
 
 ---
