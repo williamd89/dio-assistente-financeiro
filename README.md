@@ -109,14 +109,14 @@ Foi desenvolvido um pitch de 3 minutos apresentando:
 ├── perfil_investidor.json
 └── produtos_financeiros.json
 
-//docs
+/docs
 ├── 01-documentacao-agente.md
 ├── 02-base-conhecimento.md
 ├── 03-prompts.md
 ├── 04-metricas.md
 └── 05-pitch.md
 
-logs
+/logs
 └── histórico de conversas
 
 /src
@@ -143,7 +143,7 @@ README.md
 
 1. Clonar o repositório
 
-git clone https://github.com/williamd89/dio-assistente-financeiro
+git clone https://github.com/williamd89/dio-assistente-financeiro  
 cd https://github.com/williamd89/dio-assistente-financeiro
 
 2. Instalar dependências
